@@ -1,0 +1,183 @@
+#! /bin/bash
+
+help() {
+     cat <<-EOF
+NAME
+    color - ANSI color helper for bash
+
+SYNOPSIS
+    Usage: color [off|test|help|version] [text color] [background color] [style]
+
+Example
+    color green yellow bold
+      change style to get a green bold text on a yellow background
+    
+    color red
+      change style to get a red text
+
+    color off
+      return to default terminal values
+
+    color test
+      display a colored text to validate the console compatibility
+
+DESCRIPTION
+    Change text and background color values in console
+    
+    --off|off
+      return to default values
+
+    --test|test
+      display a colored text to validate the console compatibility
+
+    --version|version
+      display version and quit
+
+    --help|help
+      display help and quit
+
+    text color and background color may be one of the known colors:
+        - green
+        - black
+        - red
+        - brown
+        - blue
+        - purple
+        - cyan
+        - lightgray
+        - white
+        - darkgray
+        - lightred
+        - lightgreen
+        - yellow
+        - lightblue
+        - lightpurple
+        - lightcyan
+
+    style may be one of the following:
+        - normal
+        - bold
+        - underlined
+        - blinking
+        - reverse
+
+    Exit status:
+        0      if OK,
+        1      if any problem
+
+COPYRIGHT
+
+...
+
+Report bugs to <jfv.opensource@gmail.com>
+EOF
+}
+
+version() {
+    echo "color - ANSI color helper for bash"
+    echo "version 1.00"
+}
+
+
+test() {
+    color red green bold
+    echo "This is a colored text test"
+    color off
+    echo "return to defaults"
+}
+
+off() {
+    echo -e "\e[0m"
+}
+
+# $1: color name
+set_text_color() {
+    current=""
+
+    case "${1^^}" in
+        BLACK)  current="30";;
+        RED)  current="31";;
+        GREEN) current="32";;
+        BROWN) current="33";;
+        BLUE) current="34";;
+        PURPLE) current="35";;
+        CYAN) current="36";;
+        LIGHTGRAY) current="37";;
+        DARKGRAY) current="1;30";;
+        LIGHTRED) current="1;31";;
+        LIGHTGREEN) current="1;32";;
+        YELLOW) current="1;33";;
+        LIGHTBLUE) current="1;34";;
+        LIGHTPURPLE) current="1;35";;
+        LIGHTCYAN) current="1;36";;
+        WHITE) current="1;37";;
+        *) return
+    esac
+    echo -e "\e[${current}m"
+}
+
+# $1: color name
+set_background_color() {
+    current=""
+
+    case "${1^^}" in
+        BLACK) current="40";;
+        RED) current="41";;
+        GREEN) current="42";;
+        BROWN) current="43";;
+        BLUE) current="44";;
+        PURPLE) current="45";;
+        CYAN) current="46";;
+        LIGHTGRAY) current="47";;
+        DARKGRAY) current="1;40";;
+        LIGHTRED) current="1;41";;
+        LIGHTGREEN) current="1;42";;
+        YELLOW) current="1;43";;
+        LIGHTBLUE) current="1;14";;
+        LIGHTPURPLE) current="1;45";;
+        LIGHTCYAN) current="1;46";;
+        WHITE) current="1;47";;
+        *) return
+    esac
+    echo -e "\e[${current}m"
+}
+
+
+# $1: style name
+set_text_style() {
+    current=""
+
+    case "${1^^}" in
+        NORMAL) current="0";;
+        BOLD) current="1";;
+        UNDERLINE) current="4";;
+        BLINKING) current="5";;
+        REVERSE) current="7";;
+        *) return
+    esac
+    echo -e "\e[${current}m"
+}
+
+
+if [ "$#" == 0 ];
+then
+    help
+    exit
+fi
+case "$1" in
+        --help|help) help; exit;;
+        --version|version) version; exit;;
+        --off|off) off; exit;;
+        --test|test) test; exit;;
+esac
+
+set_text_color "$1"
+if [ -n "$2" ];
+then
+    set_background_color "$2"
+fi
+
+if [ -n "$3" ];
+then
+    set_text_style "$3"
+fi

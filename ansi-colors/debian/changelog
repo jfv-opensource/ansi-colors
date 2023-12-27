@@ -1,0 +1,5 @@
+ansi-colors (0.1) stable; urgency=low
+
+  * Initial release. Closes: #123456
+
+ -- jfv opensource <jfv@linux.opensource>  Wed, 27 Dec 2023 16:23:17 +0100
