@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: jfv.opensource <jfv.opensource@gmail.com>
 Uploaders: Christian Bayle <bayle@debian.org>
 Build-Depends: debhelper-compat (= 13), help2man
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Homepage: https://github.com/jfv-opensource/ansi-colors
 Rules-Requires-Root: no
 #Vcs-Git: https://salsa.debian.org/debian/ansi-colors.git

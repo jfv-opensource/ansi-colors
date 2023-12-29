@@ -1,4 +1,4 @@
-ansi-colors (1.0.0) stable; urgency=low
+ansi-colors (1.0) stable; urgency=low
 
   * Initial release. Closes: #123456
 
