@@ -1,7 +1,7 @@
 Source: ansi-colors
 Section: misc
 Priority: optional
-Maintainer: jfv.opensource <jfv.opensource@gmail.com>
+Maintainer: J.F. Vincent <jfv.opensource@gmail.com>
 Uploaders: Christian Bayle <bayle@debian.org>
 Build-Depends: debhelper-compat (= 13), help2man
 Standards-Version: 4.6.2

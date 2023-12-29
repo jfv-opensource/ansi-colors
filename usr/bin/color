@@ -65,10 +65,6 @@ DESCRIPTION
         0      if OK,
         1      if any problem
 
-COPYRIGHT
-
-...
-
 Report bugs to <jfv.opensource@gmail.com>
 EOF
 }
