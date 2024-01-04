@@ -15,5 +15,5 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: ansi colors tools for bash scripts
- Set of tools to make usage of ansi colors in script 
+ Tool to make usage of ansi colors in script 
  more user friendly
