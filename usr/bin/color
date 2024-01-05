@@ -83,7 +83,7 @@ test() {
 }
 
 off() {
-    echo -e "\e[0m"
+    echo -ne "\e[0m"
 }
 
 # $1: color name
@@ -109,7 +109,7 @@ set_text_color() {
         WHITE) current="1;37";;
         *) return
     esac
-    echo -e "\e[${current}m"
+    echo -ne "\e[${current}m"
 }
 
 # $1: color name
@@ -135,7 +135,7 @@ set_background_color() {
         WHITE) current="1;47";;
         *) return
     esac
-    echo -e "\e[${current}m"
+    echo -ne "\e[${current}m"
 }
 
 
@@ -151,7 +151,7 @@ set_text_style() {
         REVERSE) current="7";;
         *) return
     esac
-    echo -e "\e[${current}m"
+    echo -ne "\e[${current}m"
 }
 
 
