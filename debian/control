@@ -7,8 +7,8 @@ Build-Depends: debhelper-compat (= 13), help2man
 Standards-Version: 4.6.2
 Homepage: https://github.com/jfv-opensource/ansi-colors
 Rules-Requires-Root: no
-#Vcs-Git: https://salsa.debian.org/debian/ansi-colors.git
-#Vcs-Browser: https://salsa.debian.org/debian/ansi-colors
+Vcs-Git: git@github.com:jfv-opensource/ansi-colors.git
+Vcs-Browser: https://github.com/jfv-opensource/ansi-colors
 
 Package: ansi-colors
 Architecture: all
