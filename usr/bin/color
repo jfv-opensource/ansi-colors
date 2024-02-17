@@ -71,7 +71,7 @@ EOF
 
 version() {
     echo "color - ANSI color helper for bash"
-    echo "version 1.00"
+    echo "version 1.0.1"
 }
 
 
