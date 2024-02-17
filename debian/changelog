@@ -1,4 +1,4 @@
-ansi-colors (1.0.1) UNRELEASED; urgency=low
+ansi-colors (1.0.1) unstable; urgency=low
 
   * Initial release. Closes: #592135
   * Fix bad url in Vcs-Git field
