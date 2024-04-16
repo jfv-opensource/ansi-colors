@@ -3,22 +3,22 @@
 help() {
      cat <<-EOF
 NAME
-    color - ANSI color helper for bash
+    ansi-color - ANSI color helper for bash
 
 SYNOPSIS
     Usage: color [off|test|help|version] [text color] [background color] [style]
 
 Example
-    color green yellow bold
+    ansi-color green yellow bold
       change style to get a green bold text on a yellow background
     
-    color red
+    ansi-color red
       change style to get a red text
 
-    color off
+    ansi-color off
       return to default terminal values
 
-    color test
+    ansi-color test
       display a colored text to validate the console compatibility
 
 DESCRIPTION
@@ -65,12 +65,12 @@ DESCRIPTION
         0      if OK,
         1      if any problem
 
-Report bugs to <jfv.opensource@gmail.com>
+Report bugs to https://github.com/jfv-opensource/ansi-colors/issues
 EOF
 }
 
 version() {
-    echo "color - ANSI color helper for bash"
+    echo "ansi-color - ANSI color helper for bash"
     echo "version 1.0.1"
 }
 

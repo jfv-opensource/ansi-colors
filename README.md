@@ -1,23 +1,23 @@
 # ANSI-COLOR
 
-Helper to simplify usage of ansi color excape codes inside scripts.
+Helper to simplify usage of ansi color escape codes inside scripts.
 
 ## Usage
 
-    Usage: color [off|test|help|version] [text color] [background color] [style]
+    Usage: ansi-color [off|test|help|version] [text color] [background color] [style]
 
 ## Example
 
-    color green yellow bold
+    ansi-color green yellow bold
       change style to get a green bold text on a yellow background
     
-    color red
+    ansi-color red
       change style to get a red text
 
-    color off
+    ansi-color off
       return to default terminal values
 
-    color test
+    ansi-color test
       display a colored text to validate the console compatibility
 
 ## Parameters
